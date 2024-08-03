@@ -9,14 +9,16 @@ Output: true
 
 nums = [1, 2, 3, 1];
 
-const containsDuplicate = (nums) => {
+const name2 = "compare set with whole arr time"
+const hasDuplicate2 = (nums) => {
   // use a Set to get the nums values without duplicate values
   comparisonSet = [new Set(nums)];
   // if the lengths are different, it means there are duplicate
   return comparisonSet.length !== nums.length;
 };
 
-function containsDuplicate2(nums) {
+const name1 = "create set with uniques values time" 
+function hasDuplicate (nums) {
   // Create an empty set to store seen numbers
   const seen = new Set();
 
@@ -34,5 +36,10 @@ function containsDuplicate2(nums) {
   return false;
 }
 
-console.log(containsDuplicate(nums));
-console.log(containsDuplicate2(nums));
+console.time(name1);
+console.log(hasDuplicate(nums));
+console.timeEnd(name1);
+console.time(name2);
+console.log(hasDuplicate2(nums));
+console.timeEnd(name2);
+
