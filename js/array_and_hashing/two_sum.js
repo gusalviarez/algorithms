@@ -16,8 +16,6 @@ output = [0, 1]
 const nums = [3, 4, 5, 6]
 const target = 7
 
-const name1 = "double for"
-
 function twoSum(nums, target) {
   let result = [];
 
@@ -43,7 +41,6 @@ function twoSum(nums, target) {
 
 // we can also use two pointers technique, this has a much better performance 
 
-const name2 = "sliding window"
 function twoSum2(nums, target) {
   let sorted = nums.sort((a, b) => a - b)
   let result = []
@@ -63,10 +60,5 @@ function twoSum2(nums, target) {
   }
 }
 
-console.time(name1)
 console.log(twoSum(nums, target))
-console.timeEnd(name1)
-
-console.time(name2)
 console.log(twoSum2(nums, target))
-console.timeEnd(name2)

@@ -4,7 +4,6 @@
 let s = "listen";
 let t = "silent"; 
 
-const name1 = "convert to arr, sort and join again then compare the sorted strings"
 const isAnagram = (s,t) => {
   if (s.length !== t.length) return false
   s = s.split("").sort().join("")
@@ -12,7 +11,6 @@ const isAnagram = (s,t) => {
   return s === t
 }
 
-const name2 = "create one map to keep the counter of each string"
 const isAnagram2 = (a,b) => {
   if (a.length != b.length) return false
      
@@ -66,9 +64,5 @@ const isAnagram2 = (a,b) => {
         return true;
 }
 
-console.time(name1)
 console.log(isAnagram(s,t))
-console.timeEnd(name1)
-console.time(name2)
 console.log(isAnagram2(s,t))
-console.timeEnd(name2)
