@@ -13,10 +13,12 @@ target = 7
 output = [0, 1]
 */
 
-nums = [3, 4, 5, 6]
-target = 7
+const nums = [3, 4, 5, 6]
+const target = 7
 
-function twoSumDoubleFor(nums, target) {
+const name1 = "double for"
+
+function twoSum(nums, target) {
   let result = [];
 
   // iterate through the array to get the first element
@@ -41,7 +43,8 @@ function twoSumDoubleFor(nums, target) {
 
 // we can also use two pointers technique, this has a much better performance 
 
-function twoSumTwoPointers(nums, target) {
+const name2 = "sliding window"
+function twoSum2(nums, target) {
   let sorted = nums.sort((a, b) => a - b)
   let result = []
   let l = 0
@@ -60,14 +63,10 @@ function twoSumTwoPointers(nums, target) {
   }
 }
 
-
-
+console.time(name1)
 console.log(twoSum(nums, target))
+console.timeEnd(name1)
+
+console.time(name2)
 console.log(twoSum2(nums, target))
-
-
-
-
-
-
-
+console.timeEnd(name2)

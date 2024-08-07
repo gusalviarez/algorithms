@@ -1,3 +1,5 @@
+const name1 = "create an obj with frequencies"
+
 const kMostFrequent = function(nums, k) {
     // Frequency counter
     let freqs = {};
@@ -33,4 +35,7 @@ const kMostFrequent = function(nums, k) {
 
 k = 2
 nums = [1,1,2,2,2,3,4,4,4]
+
+console.time(name1)
 console.log(kMostFrequent(nums, k))
+console.timeEnd(name1)

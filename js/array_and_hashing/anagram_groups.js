@@ -10,6 +10,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 
 let strs = ["act","pots","tops","cat","stop","hat"]
 
+const name1 = "group anagrams using a map"
 const group_anagram = (strs) => {
     let map = new Map()
     for (let str of strs) {
@@ -24,4 +25,6 @@ const group_anagram = (strs) => {
     return Array.from(map.values())
 }
 
+console.time(name1)
 group_anagram(strs)
+console.timeEnd(name1)
